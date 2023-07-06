@@ -76,3 +76,51 @@ if (edad >= 65) {
 }
 
 */
+
+/*
+
+function solicitarInformacionPersonal() {
+
+    let nombre = prompt('Ingrese su nombre');
+
+    let apellido = prompt('Ingrese su apellido');
+
+    let edad = prompt('Ingrese su edad');
+    let edadNum = parseInt(edad);
+
+    return [nombre, apellido, edadNum];
+}
+
+
+for (let i = 1; i <= 24; i++) {
+
+    let [nombre, apellido, edadNum] = solicitarInformacionPersonal();
+
+    if (edadNum >= 18) {
+        alert(nombre + ' ' + apellido + ' se te ha asignado el turno ' + i);
+    } else {
+        alert('Lo sentimos, solo atendemos personas mayores de edad');
+        i--;
+    }
+
+}
+
+*/
+
+/*
+
+let nombreUsuario = prompt('Ingrese su nombre');
+let edadUsuario = prompt('Ingrese su edad');
+
+let usuario = {
+  nombre: nombreUsuario,
+  edad: parseInt(edadUsuario),
+  info: function() {
+    console.log(this.nombre + " tiene " + this.edad + " años");
+  }
+}
+
+usuario.info(); 
+
+*/
+

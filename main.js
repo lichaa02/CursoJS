@@ -1,25 +1,29 @@
-function solicitarInformacionPersonal() {
+let nombre = prompt(`Ingrese su nombre`)
+let notaUno = prompt(`Ingresar la primera nota`)
+let notaDos = prompt(`Ingresar la segunda nota`)
+let notaTres = prompt(`Ingresar la tercera nota`)
 
-    let nombre = prompt('Ingrese su nombre');
+class AlumnoObjeto {
 
-    let apellido = prompt('Ingrese su apellido');
+    constructor(nombre, notaUno, notaDos, notaTres) {
 
-    let edad = prompt('Ingrese su edad');
-    let edadNum = parseInt(edad);
+        this.nombre = nombre
+        this.notaUno = parseInt(notaUno)
+        this.notaDos = parseInt(notaDos)
+        this.notaTres = parseInt(notaTres)
 
-    return [nombre, apellido, edadNum];
-}
-
-
-for (let i = 1; i <= 24; i++) {
-
-    let [nombre, apellido, edadNum] = solicitarInformacionPersonal();
-
-    if (edadNum >= 18) {
-        alert(nombre + ' ' + apellido + ' se te ha asignado el turno ' + i);
-    } else {
-        alert('Lo sentimos, solo atendemos personas mayores de edad');
-        i--;
     }
 
 }
+
+function calcularPromedio() {
+
+    let promedio = (alumno.notaUno + alumno.notaDos + alumno.notaTres) / 3;
+
+    console.log("Su promedio es " + promedio);
+
+}
+
+let alumno = new Alumno(nombre, notaUno, notaDos, notaTres);
+
+calcularPromedio();
