@@ -3,7 +3,7 @@ let notaUno = prompt(`Ingresar la primera nota`)
 let notaDos = prompt(`Ingresar la segunda nota`)
 let notaTres = prompt(`Ingresar la tercera nota`)
 
-class AlumnoObjeto {
+class Alumno {
 
     constructor(nombre, notaUno, notaDos, notaTres) {
 
