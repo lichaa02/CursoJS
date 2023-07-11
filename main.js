@@ -1,29 +1,29 @@
-let nombre = prompt(`Ingrese su nombre`)
-let notaUno = prompt(`Ingresar la primera nota`)
-let notaDos = prompt(`Ingresar la segunda nota`)
-let notaTres = prompt(`Ingresar la tercera nota`)
+let productos = {
+    panaderia: [],
+    confiteria: [],
+    postres: []
+};
 
-class Alumno {
+function agregarProductoPorPrompt() {
+    const categoria = prompt("Ingrese la categoría del producto, puede ser: panaderia / confiteria / postres");
+    const nombre = prompt("Ingrese el nombre del producto:");
+    const precio = parseFloat(prompt("Ingrese el precio del producto:"));
 
-    constructor(nombre, notaUno, notaDos, notaTres) {
-
-        this.nombre = nombre
-        this.notaUno = parseInt(notaUno)
-        this.notaDos = parseInt(notaDos)
-        this.notaTres = parseInt(notaTres)
-
+    if (productos[categoria]) {
+        const id = generarIdUnico();
+        const producto = { id, nombre, precio };
+        productos[categoria].push(producto);
+        alert("Producto agregado exitosamente");
+        console.log("Producto creado:", producto); // Mostrar el producto creado en la consola
+    } else {
+        alert("La categoría especificada no existe en el objeto 'productos'.");
     }
-
 }
 
-function calcularPromedio() {
-
-    let promedio = (alumno.notaUno + alumno.notaDos + alumno.notaTres) / 3;
-
-    console.log("Su promedio es " + promedio);
-
+function generarIdUnico() {
+    return Math.floor(Date.now()); 
 }
 
-let alumno = new Alumno(nombre, notaUno, notaDos, notaTres);
-
-calcularPromedio();
+for (let i = 0; i < 3; i++) {
+    agregarProductoPorPrompt();
+}
